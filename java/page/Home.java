@@ -30,8 +30,8 @@ public class Home extends ProjectSpecificMethod{
 	public Callers clickCallers() throws IOException {
 		shadow.findElementByXPath("//span[text()='Callers']").click();
 		reportStep("Caller is Loaded sucessfully","pass");
-		//WebElement eleFrame = shadow.findElementByXPath("//iframe[@id='gsft_main']");
-		//driver.switchTo().frame(eleFrame);
+		WebElement eleFrame = shadow.findElementByXPath("//iframe[@id='gsft_main']");
+		driver.switchTo().frame(eleFrame);
 		return new Callers(driver,shadow,node);
 	}
 }
