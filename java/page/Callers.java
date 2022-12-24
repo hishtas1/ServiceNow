@@ -20,8 +20,8 @@ public class Callers extends ProjectSpecificMethod{
 		this.node=node;
 	}
 	public CreateCaller clickNew() {
-		WebElement eleFrame = shadow.findElementByXPath("//iframe[@id='gsft_main']");
-		driver.switchTo().frame(eleFrame);
+		//WebElement eleFrame = shadow.findElementByXPath("//iframe[@id='gsft_main']");
+		//driver.switchTo().frame(eleFrame);
 		driver.findElement(By.xpath("//button[@id='sysverb_new']")).click();
 		return new CreateCaller(driver,shadow,node);
 	}
